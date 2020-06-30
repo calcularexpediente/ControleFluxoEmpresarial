@@ -33,8 +33,8 @@ namespace ControleFluxoEmpresarial.Models.Cidades
             this.EstadoDAO = estadoDAO;
 
             RuleFor(e => e.Nome)
-                .NotEmpty().WithMessage("[Nome] da Cidade não pode ser vaziu.")
-                .MaximumLength(50).WithMessage("O campo [Nome] não deve possuir mais de 50 caracteres.");
+                .NotEmpty().WithMessage("Cidade não pode ser vazia.")
+                .MaximumLength(50).WithMessage("Cidade não deve possuir mais de 50 caracteres.");
 
             RuleFor(e => e.DDD)
                 .NotEmpty().WithMessage("[DDD] da Cidade não pode ser vaziu.")
